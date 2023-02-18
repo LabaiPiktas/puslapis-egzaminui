@@ -134,9 +134,12 @@ a {
 /* main */
 
 .signup-and-graphic {
-  display: inline;
-  float: left;
-  margin-top: 12.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 8rem;
 }
 
 .signup-button:hover {
@@ -145,7 +148,11 @@ a {
 
 .left-box,
 .signup-container {
+  padding: 0;
   margin: 1.5rem;
+  flex: 1 1 40%;
+  
+  
 }
 
 h4 {
@@ -181,22 +188,21 @@ p {
   font-size: large;
   color: black;
   padding: 1.3rem 3.2rem;
+  margin-top: 2rem;
   margin-bottom: 4.5rem;
 }
 
 .graphic {
-  float: right;
-  vertical-align: auto;
+  flex: 1 1 50%;
+  max-width: 540px;
+  overflow: hidden;
+  margin-left: 0;
 }
 
 .graphic img {
-  position: absolute;
-  object-fit: scale-down;
-  /*object-position: right;*/
-  width: auto;
-  max-height: 568px;
-  left: 192px;
-  top: 188px;
+  display: block;
+  width: 540px;
+  height: auto;
 }
 
 /* banner */
@@ -359,6 +365,10 @@ img#opendoor-companie {
 
 /* green graphic */
 
+.graphic-green {
+  
+}
+
 .graphic-green img {
   position: absolute;
   object-fit: scale-down;
@@ -376,6 +386,7 @@ img#opendoor-companie {
   margin: 10px;
   font-size: 20px;
 }
+
 .bottom-bi:first-of-type {
   margin-left: 1rem;
 }
@@ -404,7 +415,7 @@ footer {
   padding: 30px 30px 20px 30px;
   color: black;
   background-color: white;
-  border-top: 1px solid #e5e5e5;
+  
 }
 
 .footer>* {
@@ -473,6 +484,8 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   margin: 1.5rem;
 }
+
+
 
 /* 48em = 768px */
 
@@ -645,5 +658,11 @@ footer {
   .legal {
     display: flex;
     justify-content: space-between;
+    margin-right: 2rem;
+    padding: 20px;
+    align-items: center;
+  }
+  .legal-links {
+    font-size: 16px;
   }
 }
