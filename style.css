@@ -350,7 +350,7 @@ img#opendoor-companie {
 /* green graphic */
 
 .graphic-green {
-  flex: 1 1 40%;
+  flex: 1 1 71%;
   max-width: 540px;
   overflow: hidden;
   margin-left: 0;
@@ -634,7 +634,7 @@ footer {
   }
 
   .footer-addr {
-    flex: 1 0px;
+    flex: 2 0px;
   }
 
   .footer-nav {
