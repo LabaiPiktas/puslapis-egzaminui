@@ -1,8 +1,9 @@
 html,
 body {
+  box-sizing: border-box;
   margin: 0;
-  width: 100vw;
-  max-width: 1280px;
+  width: 98vw;
+  max-width: 1920px;
   height: 100%;
   font-family: Helvetica, sans-serif;
   background-color: white;
@@ -18,7 +19,6 @@ a {
 .header {
   background-color: white;
   position: relative;
-  width: 100%;
   height: auto;
 }
 
@@ -143,11 +143,10 @@ a {
   color: rgb(208, 21, 21);
 }
 
-.left-box,
-.signup-container {
+.left-box {
   padding: 0;
   margin: 1.5rem;
-  flex: 1 1 40%;
+  flex: 1 1 63%;
 }
 
 h4 {
@@ -188,7 +187,7 @@ p {
 }
 
 .graphic {
-  flex: 1 1 50%;
+  flex: 1 1 85%;
   max-width: 540px;
   overflow: hidden;
   margin-left: 0;
@@ -196,7 +195,7 @@ p {
 
 .graphic img {
   display: block;
-  width: 540px;
+  width: 560px;
   height: auto;
 }
 
@@ -244,9 +243,10 @@ img#opendoor-companie {
 }
 
 /* cards */
+
 .card {
   background-color: #f4f4f4;
-  width: 290px;
+  width: 280px;
   height: 420px;
   border-radius: 15px;
   overflow: hidden;
@@ -309,7 +309,7 @@ img#opendoor-companie {
 }
 
 .auction-cards {
-  margin: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .auction-cards p {
@@ -325,7 +325,7 @@ img#opendoor-companie {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   justify-content: space-between;
-  gap: 18rem;
+  gap: 15rem;
 }
 
 /* aside */
@@ -341,7 +341,6 @@ img#opendoor-companie {
   width: 90%;
   margin-top: 5rem;
   margin-left: 1.4rem;
-
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -359,12 +358,13 @@ img#opendoor-companie {
 }
 
 .graphic-green img {
-  display: block;
+  display: flex;
+  float: left;
   width: 210px;
   height: auto;
-  position: absolute;
-  right: 1%;
-  margin-top: -33%;
+  margin-right: 50%;
+  margin-top: 100%;
+
 }
 
 /* bottom nav */
@@ -473,12 +473,9 @@ footer {
 
 /* 48em = 768px */
 
-@media (min-width: 950px) {
 
-  html,
-  body {
-    width: 100vw;
-  }
+@media (min-width: 59em) {
+
 
   .header .logo {
     margin-left: 4rem;
@@ -521,25 +518,29 @@ footer {
   /* main */
 
   .signup-and-graphic {
-    display: inline;
-    float: left;
-    margin-top: 12.5rem;
-    margin-left: -16rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-left: 5rem;
+    margin-top: 2.9rem;
+  }
+
+  .left-box {
+    padding: 0;
+    margin: 1.5rem;
+    flex: 1 1 30%;
+  }
+
+  .graphic {
+    overflow: visible;
   }
 
   .graphic img {
     float: right;
-    position: absolute;
-    right: 10%;
-    margin-top: -43%;
     width: 740px;
     height: auto;
-  }
-
-  .signup-and-graphic-aside {
-    display: inline;
-    float: left;
-    margin-left: -16rem;
   }
 
   .banner {
@@ -561,12 +562,12 @@ footer {
   }
 
   .companies-pic {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    margin-left: 5rem;
     align-items: center;
-    justify-content: space-between;
-    margin-left: -6rem;
-
+    justify-content: space-around;
+    align-items: center;
   }
 
   .companies {
@@ -583,18 +584,26 @@ footer {
   }
 
   .card-wrapper {
-    display: inline-flex;
+    box-sizing: border-box;
+    display: grid;
     grid-template-columns: repeat(4, 25%);
     justify-content: space-between;
-    gap: 2.8rem;
+    gap: 0.1rem;
+  }
+
+  .signup-and-graphic-aside {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
   }
 
   .signup-and-graphic-aside {
     margin-left: 4rem;
   }
 
-  .left-box {
-    margin-top: 8rem;
+  .signup-and-graphic-aside .left-box {
+    margin-top: 6rem;
   }
 
   #textfullsize {
@@ -607,19 +616,13 @@ footer {
 
   .graphic-green img {
     float: right;
-    position: absolute;
-    right: 24%;
-    margin-top: -32%;
     width: 210px;
     height: auto;
-  }
-
-  .bottom-wraper img {
-    margin-left: -61rem;
+    margin-top: 35%;
   }
 
   footer {
-    width: 100vw;
+    margin-left: 1.5rem;
   }
 
   .footer-nav>* {
@@ -649,5 +652,7 @@ footer {
 
   .legal-links {
     font-size: 16px;
+    margin-right: 2rem;
+
   }
 }
